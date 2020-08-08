@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b33a80149f254832aeac508ae856bcb7" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_A50C7A_FEEModel.Answers" Width="1.5" PointX="8.25" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A50C7A_FEEModel.Departments" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A50C7A_FEEModel.Events" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A50C7A_FEEModel.LecturesTable" Width="1.5" PointX="5.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A50C7A_FEEModel.News" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A50C7A_FEEModel.Questions" Width="1.5" PointX="6" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A50C7A_FEEModel.StaffMembers" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A50C7A_FEEModel.Students" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A50C7A_FEEModel.StudentSubject" Width="1.5" PointX="5.25" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A50C7A_FEEModel.SubjectDepend" Width="1.5" PointX="5.25" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A50C7A_FEEModel.Subjects" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
+        <AssociationConnector Association="DB_A50C7A_FEEModel.FK_Answers_Questions" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A50C7A_FEEModel.FK_Answers_Subjects" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A50C7A_FEEModel.FK_StaffMembers_Departments" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A50C7A_FEEModel.FK_Students_Departments" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A50C7A_FEEModel.FK_Subjects_Departments" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A50C7A_FEEModel.FK_LecturesTable_StaffMembers" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A50C7A_FEEModel.FK_LecturesTable_StaffMembers1" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A50C7A_FEEModel.FK_LecturesTable_Subjects" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A50C7A_FEEModel.FK_StudentSubject_Students" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A50C7A_FEEModel.FK_StudentSubject_Subjects" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A50C7A_FEEModel.FK_SubjectDepend_Subjects" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A50C7A_FEEModel.FK_SubjectDepend_SubjectsDepend" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

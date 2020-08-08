@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_A50C7A_FEEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Answers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreatedAt" Type="datetime" />
+    <Property Name="QuestionID" Type="int" />
+    <Property Name="Value" Type="int" />
+    <Property Name="SubjectID" Type="int" />
+  </EntityType>
+  <EntityType Name="Departments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DeptName" Type="nchar" MaxLength="10" />
+    <Property Name="Code" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Events">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="FBLink" Type="nvarchar(max)" />
+    <Property Name="TwitterLink" Type="nvarchar(max)" />
+    <Property Name="Body" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="LecturesTable">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubjectID" Type="int" />
+    <Property Name="StaffMemeberID1" Type="int" />
+    <Property Name="StaffMemeberID2" Type="int" />
+    <Property Name="Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Body" Type="nvarchar(max)" />
+    <Property Name="CreatedAt" Type="datetime" />
+    <Property Name="Title" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Questions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Question" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="StaffMembers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SSN" Type="nvarchar" MaxLength="14" />
+    <Property Name="AcademicNumber" Type="int" />
+    <Property Name="FullName" Type="nvarchar(max)" />
+    <Property Name="Degree" Type="nvarchar(max)" />
+    <Property Name="Profession" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="City" Type="nvarchar(max)" />
+    <Property Name="FullAddress" Type="nvarchar(max)" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="10" />
+    <Property Name="CreatedAt" Type="datetime" />
+    <Property Name="DateOfBirth" Type="datetime" />
+    <Property Name="DeptID" Type="int" />
+  </EntityType>
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SSN" Type="nvarchar" MaxLength="14" />
+    <Property Name="AcademicNumber" Type="int" />
+    <Property Name="FullName" Type="nvarchar(max)" />
+    <Property Name="City" Type="nvarchar(max)" />
+    <Property Name="FullAddress" Type="nvarchar(max)" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="10" />
+    <Property Name="CreatedAt" Type="datetime" />
+    <Property Name="DateOfBirth" Type="datetime" />
+    <Property Name="DeptID" Type="int" />
+  </EntityType>
+  <EntityType Name="StudentSubject">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubjID" Type="int" />
+    <Property Name="StudentID" Type="int" />
+    <Property Name="CreatedAt" Type="datetime" />
+    <Property Name="Mark" Type="float" />
+  </EntityType>
+  <EntityType Name="SubjectDepend">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubjectID" Type="int" />
+    <Property Name="DependID" Type="int" />
+  </EntityType>
+  <EntityType Name="Subjects">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubjectName" Type="nvarchar(max)" />
+    <Property Name="TotalMarks" Type="int" />
+    <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="NHours" Type="int" />
+    <Property Name="DeptID" Type="int" />
+  </EntityType>
+  <Association Name="FK_Answers_Questions">
+    <End Role="Questions" Type="Self.Questions" Multiplicity="0..1" />
+    <End Role="Answers" Type="Self.Answers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Questions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Answers">
+        <PropertyRef Name="QuestionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Answers_Subjects">
+    <End Role="Subjects" Type="Self.Subjects" Multiplicity="0..1" />
+    <End Role="Answers" Type="Self.Answers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subjects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Answers">
+        <PropertyRef Name="SubjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LecturesTable_StaffMembers">
+    <End Role="StaffMembers" Type="Self.StaffMembers" Multiplicity="0..1" />
+    <End Role="LecturesTable" Type="Self.LecturesTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StaffMembers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LecturesTable">
+        <PropertyRef Name="StaffMemeberID1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LecturesTable_StaffMembers1">
+    <End Role="StaffMembers" Type="Self.StaffMembers" Multiplicity="0..1" />
+    <End Role="LecturesTable" Type="Self.LecturesTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StaffMembers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LecturesTable">
+        <PropertyRef Name="StaffMemeberID2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LecturesTable_Subjects">
+    <End Role="Subjects" Type="Self.Subjects" Multiplicity="0..1" />
+    <End Role="LecturesTable" Type="Self.LecturesTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subjects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LecturesTable">
+        <PropertyRef Name="SubjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StaffMembers_Departments">
+    <End Role="Departments" Type="Self.Departments" Multiplicity="0..1" />
+    <End Role="StaffMembers" Type="Self.StaffMembers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StaffMembers">
+        <PropertyRef Name="DeptID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Departments">
+    <End Role="Departments" Type="Self.Departments" Multiplicity="0..1" />
+    <End Role="Students" Type="Self.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="DeptID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentSubject_Students">
+    <End Role="Students" Type="Self.Students" Multiplicity="0..1" />
+    <End Role="StudentSubject" Type="Self.StudentSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StudentSubject">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentSubject_Subjects">
+    <End Role="Subjects" Type="Self.Subjects" Multiplicity="0..1" />
+    <End Role="StudentSubject" Type="Self.StudentSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subjects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StudentSubject">
+        <PropertyRef Name="SubjID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubjectDepend_Subjects">
+    <End Role="Subjects" Type="Self.Subjects" Multiplicity="0..1" />
+    <End Role="SubjectDepend" Type="Self.SubjectDepend" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subjects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubjectDepend">
+        <PropertyRef Name="SubjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubjectDepend_SubjectsDepend">
+    <End Role="Subjects" Type="Self.Subjects" Multiplicity="0..1" />
+    <End Role="SubjectDepend" Type="Self.SubjectDepend" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subjects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SubjectDepend">
+        <PropertyRef Name="DependID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Subjects_Departments">
+    <End Role="Departments" Type="Self.Departments" Multiplicity="0..1" />
+    <End Role="Subjects" Type="Self.Subjects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Subjects">
+        <PropertyRef Name="DeptID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_A50C7A_FEEModelStoreContainer">
+    <EntitySet Name="Answers" EntityType="Self.Answers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Departments" EntityType="Self.Departments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Events" EntityType="Self.Events" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LecturesTable" EntityType="Self.LecturesTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Questions" EntityType="Self.Questions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StaffMembers" EntityType="Self.StaffMembers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentSubject" EntityType="Self.StudentSubject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubjectDepend" EntityType="Self.SubjectDepend" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Subjects" EntityType="Self.Subjects" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Answers_Questions" Association="Self.FK_Answers_Questions">
+      <End Role="Questions" EntitySet="Questions" />
+      <End Role="Answers" EntitySet="Answers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Answers_Subjects" Association="Self.FK_Answers_Subjects">
+      <End Role="Subjects" EntitySet="Subjects" />
+      <End Role="Answers" EntitySet="Answers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LecturesTable_StaffMembers" Association="Self.FK_LecturesTable_StaffMembers">
+      <End Role="StaffMembers" EntitySet="StaffMembers" />
+      <End Role="LecturesTable" EntitySet="LecturesTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LecturesTable_StaffMembers1" Association="Self.FK_LecturesTable_StaffMembers1">
+      <End Role="StaffMembers" EntitySet="StaffMembers" />
+      <End Role="LecturesTable" EntitySet="LecturesTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LecturesTable_Subjects" Association="Self.FK_LecturesTable_Subjects">
+      <End Role="Subjects" EntitySet="Subjects" />
+      <End Role="LecturesTable" EntitySet="LecturesTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StaffMembers_Departments" Association="Self.FK_StaffMembers_Departments">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="StaffMembers" EntitySet="StaffMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Departments" Association="Self.FK_Students_Departments">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentSubject_Students" Association="Self.FK_StudentSubject_Students">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="StudentSubject" EntitySet="StudentSubject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentSubject_Subjects" Association="Self.FK_StudentSubject_Subjects">
+      <End Role="Subjects" EntitySet="Subjects" />
+      <End Role="StudentSubject" EntitySet="StudentSubject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubjectDepend_Subjects" Association="Self.FK_SubjectDepend_Subjects">
+      <End Role="Subjects" EntitySet="Subjects" />
+      <End Role="SubjectDepend" EntitySet="SubjectDepend" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubjectDepend_SubjectsDepend" Association="Self.FK_SubjectDepend_SubjectsDepend">
+      <End Role="Subjects" EntitySet="Subjects" />
+      <End Role="SubjectDepend" EntitySet="SubjectDepend" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Subjects_Departments" Association="Self.FK_Subjects_Departments">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="Subjects" EntitySet="Subjects" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

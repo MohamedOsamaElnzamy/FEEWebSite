@@ -1,0 +1,58 @@
+﻿@model the_website_test.Models.Subjects
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Subjects</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SubjectName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubjectName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalMarks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalMarks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NHours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Departments.DeptName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Departments.DeptName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

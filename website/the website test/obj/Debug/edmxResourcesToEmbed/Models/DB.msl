@@ -24,6 +24,7 @@
     <EntitySetMapping Name="Events">
       <EntityTypeMapping TypeName="DB_A50C7A_FEEModel.Events">
         <MappingFragment StoreEntitySet="Events">
+          <ScalarProperty Name="Image_path" ColumnName="Image_path" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="FBLink" ColumnName="FBLink" />
@@ -47,6 +48,7 @@
     <EntitySetMapping Name="News">
       <EntityTypeMapping TypeName="DB_A50C7A_FEEModel.News">
         <MappingFragment StoreEntitySet="News">
+          <ScalarProperty Name="Image_path" ColumnName="Image_path" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Body" ColumnName="Body" />
           <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />

@@ -18,5 +18,6 @@ namespace the_website_test.Models
         public string Body { get; set; }
         public Nullable<System.DateTime> CreatedAt { get; set; }
         public string Title { get; set; }
+        public string Image_path { get; set; }
     }
 }

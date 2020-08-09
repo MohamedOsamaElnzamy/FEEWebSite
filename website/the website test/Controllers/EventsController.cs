@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -46,10 +47,13 @@ namespace the_website_test.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Title,FBLink,TwitterLink,Body,Description")] Events events)
+        public ActionResult Create([Bind(Include = "ID,Title,FBLink,TwitterLink,Body,Description,Image_path")] Events events, HttpPostedFileBase ImageFile)
         {
             if (ModelState.IsValid)
             {
+                string path = Path.Combine(Server.MapPath("~/images"), ImageFile.FileName);
+                ImageFile.SaveAs(path);
+                events.Image_path = path;
                 db.Events.Add(events);
                 db.SaveChanges();
                 return RedirectToAction("Index");

@@ -20,5 +20,6 @@ namespace the_website_test.Models
         public string TwitterLink { get; set; }
         public string Body { get; set; }
         public string Description { get; set; }
+        public string Image_path { get; set; }
     }
 }

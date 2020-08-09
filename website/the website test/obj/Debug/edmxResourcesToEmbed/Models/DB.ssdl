@@ -28,6 +28,7 @@
     <Property Name="TwitterLink" Type="nvarchar(max)" />
     <Property Name="Body" Type="nvarchar(max)" />
     <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Image_path" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="LecturesTable">
     <Key>
@@ -47,6 +48,7 @@
     <Property Name="Body" Type="nvarchar(max)" />
     <Property Name="CreatedAt" Type="datetime" />
     <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="Image_path" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="Questions">
     <Key>

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DB_A50C7A_FEEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DB_A50C7A_FEEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Answers">
           <Key>
             <PropertyRef Name="ID" />
@@ -33,6 +33,7 @@
           <Property Name="TwitterLink" Type="nvarchar(max)" />
           <Property Name="Body" Type="nvarchar(max)" />
           <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Image_path" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="LecturesTable">
           <Key>
@@ -52,6 +53,7 @@
           <Property Name="Body" Type="nvarchar(max)" />
           <Property Name="CreatedAt" Type="datetime" />
           <Property Name="Title" Type="nvarchar(max)" />
+          <Property Name="Image_path" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Questions">
           <Key>
@@ -327,8 +329,7 @@
             <End Role="Subjects" EntitySet="Subjects" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DB_A50C7A_FEEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -365,6 +366,7 @@
           <Property Name="TwitterLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Image_path" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="LecturesTable">
           <Key>
@@ -387,6 +389,7 @@
           <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="CreatedAt" Type="DateTime" Precision="3" />
           <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Image_path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Questions">
           <Key>
@@ -707,6 +710,7 @@
           <EntitySetMapping Name="Events">
             <EntityTypeMapping TypeName="DB_A50C7A_FEEModel.Events">
               <MappingFragment StoreEntitySet="Events">
+                <ScalarProperty Name="Image_path" ColumnName="Image_path" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="FBLink" ColumnName="FBLink" />
@@ -730,6 +734,7 @@
           <EntitySetMapping Name="News">
             <EntityTypeMapping TypeName="DB_A50C7A_FEEModel.News">
               <MappingFragment StoreEntitySet="News">
+                <ScalarProperty Name="Image_path" ColumnName="Image_path" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Body" ColumnName="Body" />
                 <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />

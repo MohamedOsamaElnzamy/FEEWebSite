@@ -1,0 +1,98 @@
+﻿@model IEnumerable<the_website_test.Models.Events>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!--Start news home-->
+<div class="Event-Home">
+    <div class="container-fliud">
+        <div class="row">
+            <div class="col">
+                <div class="search-Event">
+                    <select class="browser-default custom-select">
+                        <option selected>Any Month</option>
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                    <select class="browser-default custom-select">
+                        <option selected>Any Year</option>
+                        <option value="13">2020</option>
+                        <option value="14">2021</option>
+                        <option value="15">2022</option>
+                    </select>
+                    <select class="browser-default custom-select">
+                        <option selected>All categories</option>
+                        <option value="16">Aumni</option>
+                        <option value="17">Academic</option>
+                        <option value="18">Conferance</option>
+                        <option value="19">Student societies</option>
+                        <input type="search" class="Search-input col-md-2" id="search_event" placeholder="Keyword">
+                        <a class="btn btn-default addevent" href="../../AddEvent/html/AddEvent.html">Add Event</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end event home-->
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FBLink)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TwitterLink)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Body)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FBLink)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TwitterLink)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Body)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>

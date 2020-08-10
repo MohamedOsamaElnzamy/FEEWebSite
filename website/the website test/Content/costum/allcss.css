@@ -1090,3 +1090,57 @@
         }
         
     /*end news body*/
+    
+/*start Goals*/  
+.card h3
+{
+    color: #741a40;
+    padding: 10px;
+    text-align: center;
+}
+
+.card
+{
+    margin: 40px;
+}
+.card .divider
+   {
+    height: 1px;
+   padding: 3px;
+    overflow: hidden;
+    background-color: #741a40;
+   }
+/*End history*/
+.cover
+{
+  position: relative;
+  text-align: center;
+  color: #efeeee;
+    
+}
+
+.cover .title {
+  position: absolute;
+  top: 120px;
+  left: 100px; 
+  font-size: 80px;
+  color: white;
+}
+
+/*start cover*/
+.cover
+{
+  position: relative;
+  text-align: center;
+  color: #efeeee;
+    
+}
+
+.cover .title {
+  position: absolute;
+  top: 120px;
+  left: 100px; 
+  font-size: 80px;
+  color: white;
+}
+/*End cover*/

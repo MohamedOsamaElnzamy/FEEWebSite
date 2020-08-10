@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -32,6 +33,10 @@ namespace the_website_test.Controllers
             {
                 return HttpNotFound();
             }
+            if (news.Image_path==null)
+            {
+                news.Image_path = "~/images/logo/fee_en.png";
+            }
             return View(news);
         }
 
@@ -46,10 +51,13 @@ namespace the_website_test.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Body,CreatedAt,Title")] News news)
+        public ActionResult Create([Bind(Include = "ID,Body,CreatedAt,Title")] News news ,HttpPostedFileBase ImageFile)
         {
             if (ModelState.IsValid)
             {
+                string path = Path.Combine(Server.MapPath("~/images"), ImageFile.FileName);
+                ImageFile.SaveAs(path);
+                news.Image_path = path;
                 db.News.Add(news);
                 db.SaveChanges();
                 return RedirectToAction("Index");

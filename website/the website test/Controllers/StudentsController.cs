@@ -10,15 +10,11 @@ using the_website_test.Models;
 
 namespace the_website_test.Controllers
 {
+   
     public class StudentsController : Controller
     {
         private DB_A50C7A_FEEEntities db = new DB_A50C7A_FEEEntities();
-        public class subjectsWithMark
-        {
-            public string name;
-            public string code;
-            public double? Mark;
-        }
+       
         // GET: Students
         public ActionResult Index()
         {

@@ -173,6 +173,7 @@
     <Compile Include="Models\GetRequiredSubjects_Result.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\helper.cs" />
     <Compile Include="Models\LecturesTable.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
@@ -379,6 +380,7 @@
     <Content Include="Views\StudentSubjects\Details.cshtml" />
     <Content Include="Views\StudentSubjects\Edit.cshtml" />
     <Content Include="Views\StudentSubjects\Index.cshtml" />
+    <Content Include="Views\Students\SubjectRegisteration.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

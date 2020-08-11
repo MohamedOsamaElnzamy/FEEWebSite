@@ -25,6 +25,9 @@ namespace the_website_test.Models
         public int ID { get; set; }
         public string DeptName { get; set; }
         public string Code { get; set; }
+        public string About { get; set; }
+        public Nullable<int> Head { get; set; }
+        public string Regulation_path { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StaffMembers> StaffMembers { get; set; }
@@ -32,5 +35,6 @@ namespace the_website_test.Models
         public virtual ICollection<Students> Students { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Subjects> Subjects { get; set; }
+        public virtual StaffMembers StaffMembers1 { get; set; }
     }
 }

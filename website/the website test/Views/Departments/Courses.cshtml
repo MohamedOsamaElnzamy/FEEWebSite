@@ -1,0 +1,42 @@
+﻿@model IEnumerable<the_website_test.Models.Subjects>
+@{
+    ViewBag.Title = "Courses";
+}
+@Html.Partial("DepartmentCategories")
+
+
+<div class="Staff col-xl-8">
+    <h1>Courses</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="table">
+                    <table class="result-table">
+                        <tr>
+                            <th>No</th>
+                            <th>Subject</th>
+                            <th>Code</th>
+                            <th>Hour</th>
+                          
+                            <th>Dependent</th>
+                        </tr>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td id="no">@item.ID</td>
+                                <td id="sub">@item.SubjectName</td>
+                                <td id="code">@item.Code</td>
+                                <td id="Hour">@item.NHours</td>
+                               
+                                <td id="Dependent">@item.DeptID</td>
+                            </tr>
+                        }
+                     
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  </div>
+</div>

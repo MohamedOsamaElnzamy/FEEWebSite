@@ -19,6 +19,7 @@ namespace the_website_test.Models
         {
             this.LecturesTable = new HashSet<LecturesTable>();
             this.LecturesTable1 = new HashSet<LecturesTable>();
+            this.Departments1 = new HashSet<Departments>();
         }
     
         public int ID { get; set; }
@@ -34,11 +35,14 @@ namespace the_website_test.Models
         public Nullable<System.DateTime> CreatedAt { get; set; }
         public Nullable<System.DateTime> DateOfBirth { get; set; }
         public Nullable<int> DeptID { get; set; }
+        public string Image_path { get; set; }
     
         public virtual Departments Departments { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LecturesTable> LecturesTable { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LecturesTable> LecturesTable1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Departments> Departments1 { get; set; }
     }
 }

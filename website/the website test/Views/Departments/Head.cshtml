@@ -1,0 +1,40 @@
+﻿@model the_website_test.Models.StaffMembers
+@{
+    ViewBag.Title = "Head";
+}
+
+@Html.Partial("DepartmentCategories")
+
+<div class="head col-xl-8">
+    <h1>The head of the department</h1>
+    <div class="container">
+        <img src="" alt="Ramadan Abdel-Hamid Al-Shanwany" class="profile" id="profile_pic"><br>
+        <label for="name">Prof:</label>
+        <output id="name">@Model.FullName</output><br>
+        <label for="NationalId">National Id:</label>
+        <output id="NationalId">@Model.SSN</output><br>
+        <label for="Nationality">Nationality  :</label>
+        <output id="Nationality">Egyptian</output><br>
+        <label for="Marital-Status">Marital Status:</label>
+        <output id="Marital-Status">Married with three children</output><br>
+        <label for="department">Department:</label>
+        <output id="department">@Model.DeptID</output><br>
+        <label for="phone">Phone:</label>
+        <output id="phone">@Model.PhoneNumber</output><br>
+        <label for="Accounts">Accounts:</label>
+        <ul class="list-unstyled social-list">           
+            <li><img src="~/images/Social/facebook.png" alt="Facebook"></li>
+            <li><img src="~/images/Social/linkedin.png" alt="Linkedin"></li>
+            <li><img src="../images/social/twitter.png" alt="Twitter"></li>
+            <li><img src="~/images/Social/teams.png" alt="Teams" width="45" height="45"></li>
+            <br>
+            <br>
+            <h3> EDUCATIONAL AND PROFESSIONAL</h3>
+            <ul> 
+                @Model.Degree
+            </ul>
+        </ul>
+    </div>
+</div>
+    </div>
+</div>

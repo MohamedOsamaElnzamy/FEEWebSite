@@ -10,112 +10,112 @@ using the_website_test.Models;
 
 namespace the_website_test.Controllers
 {
-    public class StudentsController : Controller
+    public class StaffMembersController : Controller
     {
         private DB_A50C7A_FEEEntities db = new DB_A50C7A_FEEEntities();
 
-        // GET: Students
+        // GET: StaffMembers
         public ActionResult Index()
         {
-            var students = db.Students.Include(s => s.Departments);
-            return View(students.ToList());
+            var staffMembers = db.StaffMembers.Include(s => s.Departments);
+            return View(staffMembers.ToList());
         }
 
-        // GET: Students/Details/5
+        // GET: StaffMembers/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Students students = db.Students.Find(id);
-            if (students == null)
+            StaffMembers staffMembers = db.StaffMembers.Find(id);
+            if (staffMembers == null)
             {
                 return HttpNotFound();
             }
-            return View(students);
+            return View(staffMembers);
         }
 
-        // GET: Students/Create
+        // GET: StaffMembers/Create
         public ActionResult Create()
         {
             ViewBag.DeptID = new SelectList(db.Departments, "ID", "DeptName");
             return View();
         }
 
-        // POST: Students/Create
+        // POST: StaffMembers/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,SSN,AcademicNumber,FullName,City,FullAddress,Gender,CreatedAt,DateOfBirth,DeptID")] Students students)
+        public ActionResult Create([Bind(Include = "ID,SSN,AcademicNumber,FullName,Degree,Profession,PhoneNumber,City,FullAddress,Gender,CreatedAt,DateOfBirth,DeptID")] StaffMembers staffMembers)
         {
             if (ModelState.IsValid)
             {
-                db.Students.Add(students);
+                db.StaffMembers.Add(staffMembers);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.DeptID = new SelectList(db.Departments, "ID", "DeptName", students.DeptID);
-            return View(students);
+            ViewBag.DeptID = new SelectList(db.Departments, "ID", "DeptName", staffMembers.DeptID);
+            return View(staffMembers);
         }
 
-        // GET: Students/Edit/5
+        // GET: StaffMembers/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Students students = db.Students.Find(id);
-            if (students == null)
+            StaffMembers staffMembers = db.StaffMembers.Find(id);
+            if (staffMembers == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.DeptID = new SelectList(db.Departments, "ID", "DeptName", students.DeptID);
-            return View(students);
+            ViewBag.DeptID = new SelectList(db.Departments, "ID", "DeptName", staffMembers.DeptID);
+            return View(staffMembers);
         }
 
-        // POST: Students/Edit/5
+        // POST: StaffMembers/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,SSN,AcademicNumber,FullName,City,FullAddress,Gender,CreatedAt,DateOfBirth,DeptID")] Students students)
+        public ActionResult Edit([Bind(Include = "ID,SSN,AcademicNumber,FullName,Degree,Profession,PhoneNumber,City,FullAddress,Gender,CreatedAt,DateOfBirth,DeptID")] StaffMembers staffMembers)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(students).State = EntityState.Modified;
+                db.Entry(staffMembers).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.DeptID = new SelectList(db.Departments, "ID", "DeptName", students.DeptID);
-            return View(students);
+            ViewBag.DeptID = new SelectList(db.Departments, "ID", "DeptName", staffMembers.DeptID);
+            return View(staffMembers);
         }
 
-        // GET: Students/Delete/5
+        // GET: StaffMembers/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Students students = db.Students.Find(id);
-            if (students == null)
+            StaffMembers staffMembers = db.StaffMembers.Find(id);
+            if (staffMembers == null)
             {
                 return HttpNotFound();
             }
-            return View(students);
+            return View(staffMembers);
         }
 
-        // POST: Students/Delete/5
+        // POST: StaffMembers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Students students = db.Students.Find(id);
-            db.Students.Remove(students);
+            StaffMembers staffMembers = db.StaffMembers.Find(id);
+            db.StaffMembers.Remove(staffMembers);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

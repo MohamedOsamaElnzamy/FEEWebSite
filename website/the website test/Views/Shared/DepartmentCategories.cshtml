@@ -1,0 +1,22 @@
+﻿@model the_website_test.Models.Departments
+<head>
+    <link rel='stylesheet' href='~/Content/costum/bootstrap.css'>
+    <link rel='stylesheet' href='~/Content/costum/allcss.css'>
+    <link rel="stylesheet" href="~/Content/costum/layoutcss.css">
+</head>
+
+<div class="cover">
+    <img alt="FEE 50" src="~/images/cover/cover.jpg" class="History-cover">
+    <div class="title">@Model.DeptName</div>
+</div>
+<br />
+<div class="head">
+    <div class="row">
+        <div class="list-group  col-xl-3">
+            <a href="~/Controllers/Departments/About/@Model.ID" class="list-group-item list-group-item-action active">About Department</a>
+            <a href="~/Controllers/Departments/Head/@Model.ID" class="list-group-item list-group-item-action">Head</a>
+            <a href="~/Controllers/Departments/Staff/@Model.ID" class="list-group-item list-group-item-action ">Staff</a>
+            <a href="~/Controllers/Departments/Courses/@Model.ID" class="list-group-item list-group-item-action">Course</a>
+            <a href="~/Controllers/Departments/Regulation/@Model.ID" class="list-group-item list-group-item-action">Regulation</a>
+            <a href="~/Controllers/Departments/Researches/@Model.ID" class="list-group-item list-group-item-action">Researches</a>
+</div>

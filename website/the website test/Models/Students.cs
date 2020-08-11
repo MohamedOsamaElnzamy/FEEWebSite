@@ -30,6 +30,7 @@ namespace the_website_test.Models
         public Nullable<System.DateTime> CreatedAt { get; set; }
         public Nullable<System.DateTime> DateOfBirth { get; set; }
         public Nullable<int> DeptID { get; set; }
+        public string Image_path { get; set; }
     
         public virtual Departments Departments { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

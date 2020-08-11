@@ -15,6 +15,9 @@
     <EntitySetMapping Name="Departments">
       <EntityTypeMapping TypeName="DB_A50C7A_FEEModel.Departments">
         <MappingFragment StoreEntitySet="Departments">
+          <ScalarProperty Name="Regulation_path" ColumnName="Regulation_path" />
+          <ScalarProperty Name="Head" ColumnName="Head" />
+          <ScalarProperty Name="About" ColumnName="About" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="DeptName" ColumnName="DeptName" />
           <ScalarProperty Name="Code" ColumnName="Code" />
@@ -67,6 +70,7 @@
     <EntitySetMapping Name="StaffMembers">
       <EntityTypeMapping TypeName="DB_A50C7A_FEEModel.StaffMembers">
         <MappingFragment StoreEntitySet="StaffMembers">
+          <ScalarProperty Name="Image_path" ColumnName="Image_path" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="SSN" ColumnName="SSN" />
           <ScalarProperty Name="AcademicNumber" ColumnName="AcademicNumber" />
@@ -86,6 +90,7 @@
     <EntitySetMapping Name="Students">
       <EntityTypeMapping TypeName="DB_A50C7A_FEEModel.Students">
         <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="Image_path" ColumnName="Image_path" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="SSN" ColumnName="SSN" />
           <ScalarProperty Name="AcademicNumber" ColumnName="AcademicNumber" />

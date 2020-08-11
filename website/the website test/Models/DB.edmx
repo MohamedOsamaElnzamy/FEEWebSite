@@ -22,6 +22,9 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DeptName" Type="nchar" MaxLength="10" />
           <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="About" Type="nvarchar(max)" />
+          <Property Name="Head" Type="int" />
+          <Property Name="Regulation_path" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Events">
           <Key>
@@ -79,6 +82,7 @@
           <Property Name="CreatedAt" Type="datetime" />
           <Property Name="DateOfBirth" Type="datetime" />
           <Property Name="DeptID" Type="int" />
+          <Property Name="Image_path" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Students">
           <Key>
@@ -94,6 +98,7 @@
           <Property Name="CreatedAt" Type="datetime" />
           <Property Name="DateOfBirth" Type="datetime" />
           <Property Name="DeptID" Type="int" />
+          <Property Name="Image_path" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="StudentSubject">
           <Key>
@@ -145,6 +150,18 @@
             </Principal>
             <Dependent Role="Answers">
               <PropertyRef Name="SubjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Departments_StaffMembers">
+          <End Role="StaffMembers" Type="Self.StaffMembers" Multiplicity="0..1" />
+          <End Role="Departments" Type="Self.Departments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StaffMembers">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Departments">
+              <PropertyRef Name="Head" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -288,6 +305,10 @@
             <End Role="Subjects" EntitySet="Subjects" />
             <End Role="Answers" EntitySet="Answers" />
           </AssociationSet>
+          <AssociationSet Name="FK_Departments_StaffMembers" Association="Self.FK_Departments_StaffMembers">
+            <End Role="StaffMembers" EntitySet="StaffMembers" />
+            <End Role="Departments" EntitySet="Departments" />
+          </AssociationSet>
           <AssociationSet Name="FK_LecturesTable_StaffMembers" Association="Self.FK_LecturesTable_StaffMembers">
             <End Role="StaffMembers" EntitySet="StaffMembers" />
             <End Role="LecturesTable" EntitySet="LecturesTable" />
@@ -355,6 +376,10 @@
           <NavigationProperty Name="StaffMembers" Relationship="Self.FK_StaffMembers_Departments" FromRole="Departments" ToRole="StaffMembers" />
           <NavigationProperty Name="Students" Relationship="Self.FK_Students_Departments" FromRole="Departments" ToRole="Students" />
           <NavigationProperty Name="Subjects" Relationship="Self.FK_Subjects_Departments" FromRole="Departments" ToRole="Subjects" />
+          <Property Name="About" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Head" Type="Int32" />
+          <NavigationProperty Name="StaffMembers1" Relationship="DB_A50C7A_FEEModel.FK_Departments_StaffMembers" FromRole="Departments" ToRole="StaffMembers" />
+          <Property Name="Regulation_path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Events">
           <Key>
@@ -419,6 +444,8 @@
           <NavigationProperty Name="Departments" Relationship="Self.FK_StaffMembers_Departments" FromRole="StaffMembers" ToRole="Departments" />
           <NavigationProperty Name="LecturesTable" Relationship="Self.FK_LecturesTable_StaffMembers" FromRole="StaffMembers" ToRole="LecturesTable" />
           <NavigationProperty Name="LecturesTable1" Relationship="Self.FK_LecturesTable_StaffMembers1" FromRole="StaffMembers" ToRole="LecturesTable" />
+          <NavigationProperty Name="Departments1" Relationship="DB_A50C7A_FEEModel.FK_Departments_StaffMembers" FromRole="StaffMembers" ToRole="Departments" />
+          <Property Name="Image_path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Students">
           <Key>
@@ -436,6 +463,7 @@
           <Property Name="DeptID" Type="Int32" />
           <NavigationProperty Name="Departments" Relationship="Self.FK_Students_Departments" FromRole="Students" ToRole="Departments" />
           <NavigationProperty Name="StudentSubject" Relationship="Self.FK_StudentSubject_Students" FromRole="Students" ToRole="StudentSubject" />
+          <Property Name="Image_path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="StudentSubject">
           <Key>
@@ -680,7 +708,23 @@
             <End Role="Subjects" EntitySet="Subjects" />
             <End Role="SubjectDepend" EntitySet="SubjectDepend" />
           </AssociationSet>
+          <AssociationSet Name="FK_Departments_StaffMembers" Association="DB_A50C7A_FEEModel.FK_Departments_StaffMembers">
+            <End Role="StaffMembers" EntitySet="StaffMembers" />
+            <End Role="Departments" EntitySet="Departments" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK_Departments_StaffMembers">
+          <End Type="DB_A50C7A_FEEModel.StaffMembers" Role="StaffMembers" Multiplicity="0..1" />
+          <End Type="DB_A50C7A_FEEModel.Departments" Role="Departments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StaffMembers">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Departments">
+              <PropertyRef Name="Head" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -701,6 +745,9 @@
           <EntitySetMapping Name="Departments">
             <EntityTypeMapping TypeName="DB_A50C7A_FEEModel.Departments">
               <MappingFragment StoreEntitySet="Departments">
+                <ScalarProperty Name="Regulation_path" ColumnName="Regulation_path" />
+                <ScalarProperty Name="Head" ColumnName="Head" />
+                <ScalarProperty Name="About" ColumnName="About" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="DeptName" ColumnName="DeptName" />
                 <ScalarProperty Name="Code" ColumnName="Code" />
@@ -753,6 +800,7 @@
           <EntitySetMapping Name="StaffMembers">
             <EntityTypeMapping TypeName="DB_A50C7A_FEEModel.StaffMembers">
               <MappingFragment StoreEntitySet="StaffMembers">
+                <ScalarProperty Name="Image_path" ColumnName="Image_path" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="SSN" ColumnName="SSN" />
                 <ScalarProperty Name="AcademicNumber" ColumnName="AcademicNumber" />
@@ -772,6 +820,7 @@
           <EntitySetMapping Name="Students">
             <EntityTypeMapping TypeName="DB_A50C7A_FEEModel.Students">
               <MappingFragment StoreEntitySet="Students">
+                <ScalarProperty Name="Image_path" ColumnName="Image_path" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="SSN" ColumnName="SSN" />
                 <ScalarProperty Name="AcademicNumber" ColumnName="AcademicNumber" />

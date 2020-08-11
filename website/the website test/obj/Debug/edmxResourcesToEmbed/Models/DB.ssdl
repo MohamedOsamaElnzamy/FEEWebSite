@@ -17,6 +17,9 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="DeptName" Type="nchar" MaxLength="10" />
     <Property Name="Code" Type="nvarchar(max)" />
+    <Property Name="About" Type="nvarchar(max)" />
+    <Property Name="Head" Type="int" />
+    <Property Name="Regulation_path" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="Events">
     <Key>
@@ -74,6 +77,7 @@
     <Property Name="CreatedAt" Type="datetime" />
     <Property Name="DateOfBirth" Type="datetime" />
     <Property Name="DeptID" Type="int" />
+    <Property Name="Image_path" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="Students">
     <Key>
@@ -89,6 +93,7 @@
     <Property Name="CreatedAt" Type="datetime" />
     <Property Name="DateOfBirth" Type="datetime" />
     <Property Name="DeptID" Type="int" />
+    <Property Name="Image_path" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="StudentSubject">
     <Key>
@@ -140,6 +145,18 @@
       </Principal>
       <Dependent Role="Answers">
         <PropertyRef Name="SubjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Departments_StaffMembers">
+    <End Role="StaffMembers" Type="Self.StaffMembers" Multiplicity="0..1" />
+    <End Role="Departments" Type="Self.Departments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StaffMembers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Departments">
+        <PropertyRef Name="Head" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -282,6 +299,10 @@
     <AssociationSet Name="FK_Answers_Subjects" Association="Self.FK_Answers_Subjects">
       <End Role="Subjects" EntitySet="Subjects" />
       <End Role="Answers" EntitySet="Answers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Departments_StaffMembers" Association="Self.FK_Departments_StaffMembers">
+      <End Role="StaffMembers" EntitySet="StaffMembers" />
+      <End Role="Departments" EntitySet="Departments" />
     </AssociationSet>
     <AssociationSet Name="FK_LecturesTable_StaffMembers" Association="Self.FK_LecturesTable_StaffMembers">
       <End Role="StaffMembers" EntitySet="StaffMembers" />

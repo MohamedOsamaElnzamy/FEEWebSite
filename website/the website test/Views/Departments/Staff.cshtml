@@ -1,0 +1,21 @@
+﻿@model IEnumerable<the_website_test.Models.StaffMembers>
+@{
+    ViewBag.Title = "Staff";
+}
+@Html.Partial("DepartmentCategories")
+
+
+<div class="Staff col-xl-8">
+    <h1>Staff</h1>
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+              {                                  
+                 @Html.Partial("Card",item)     
+              }
+        
+        </div>
+    </div>
+</div>
+               </div>
+<!--end Account-->

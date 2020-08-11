@@ -163,3 +163,4 @@ F:\FEEWebSite\website\the website test\obj\Debug\the website test.csproj.CoreCom
 F:\FEEWebSite\website\the website test\obj\Debug\the website test.csproj.CopyComplete
 F:\FEEWebSite\website\the website test\obj\Debug\the website test.dll
 F:\FEEWebSite\website\the website test\obj\Debug\the website test.pdb
+F:\FEEWebSite\website\the website test\obj\Debug\the website test.csprojAssemblyReference.cache

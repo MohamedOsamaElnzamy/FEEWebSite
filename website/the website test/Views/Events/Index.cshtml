@@ -38,67 +38,90 @@
                             <option value="18">Conferance</option>
                             <option value="19">Student societies</option>
                             <input type="search" class="Search-input col-md-2" id="search_event" placeholder="Keyword">
-                            <a class="btn btn-default addevent" href="../../AddEvent/html/AddEvent.html">Add Event</a>
+                            <a class="btn btn-default addevent" href="Create">Add Event</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!--end event home-->
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <a class="btn btn-primary top-date">@item.Title</a>
+                    <div class="card" style="width: 18rem;">
+                        <a href="Events/Details/@item.ID" class="btn btn-primary long">More details</a>
+                        <div class="card-body">
+                            <h3 class="card-title">@item.Description</h3>
+                            <p>
+                                @item.Body
+                            </p>
+                            <div class="event-link">
+                                <a href="@item.FBLink" class="social"><img src="~/images/Social/facebook-24.png"></a>
+                                <a href="@item.TwitterLink" class="social"><img src="../images/Social/twitter-32.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
 
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FBLink)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TwitterLink)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Body)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Image_path)
-            </th>
-            <th></th>
-        </tr>
+        </div>
+    </div>
+            @*<p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FBLink)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TwitterLink)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Body)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Image_path)
+                    </th>
+                    <th></th>
+                </tr>
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FBLink)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TwitterLink)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Body)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Description)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Image_path)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-                </td>
-            </tr>
-        }
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FBLink)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TwitterLink)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Body)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Image_path)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                        </td>
+                    </tr>
+                }
 
-    </table>
+            </table>*@

@@ -1395,3 +1395,341 @@ h1 ,h3
 }
 
 /*End history*/
+
+    /*************************************start home page*********************************************/
+
+   /*start Slider home page*/
+   .sliderHomepage
+   {
+      background-color: #DDD;
+   }
+   .sliderHomepage .carousel-item
+   {
+      -webkit-background-size:cover;
+      -moz-background-size:cover;
+      -o-background-size:cover;
+      background-size:cover;
+   }
+   .sliderHomepage .carousel-one
+   {
+      background-image: url('../images/fee/00.jpg');
+   }
+   .sliderHomepage .carousel-two
+   {
+      background-image: url('../images/fee/01.jpg');
+   }
+   .sliderHomepage .carousel-three
+   {
+      background-image: url('../images/fee/02.jpg');
+   }
+   .sliderHomepage .carousel-indicators li{
+      height: 8px;
+      cursor: pointer;
+   }
+   /******************************************************End Slider************************************************/
+   /******************************************************about-main************************************************/
+
+.abouthomepage .frame
+{ 
+    box-shadow: inset 0 0 0 6px #741a40;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    height: 330px;
+    width: 430px;
+    margin: 70px
+}
+.abouthomepage .frame img
+{
+    max-width: 100%;
+    -webkit-transform: translate(30px, 30px);
+    -ms-transform: translate(30px, 30px);
+    transform: translate(30px, 30px);
+    height: 330px;
+    width: 430px;
+   
+}
+  .abouthomepage .about-main h2{
+      margin-top: 80px;
+      color: #741a40;
+      font-weight: bold;
+      text-align:left;
+   
+   }
+   
+   /*Strat cardes*/
+   .card
+   {
+    margin-top: 50px;
+    margin-right: 30px;
+    margin-left: 30px;
+    border-color: #741a40;
+    box-shadow: 7px 8px 8px -5px #818284;
+    background: #ffffff;
+    min-width: 330px;
+    border-radius: 0px;
+
+    
+   }
+   
+   .card-body
+   {
+          min-width: 360px;
+          min-height: 120px;
+   }
+   .card .divider
+   {
+    height: 1px;
+   padding: 3px;
+    overflow: hidden;
+    background-color: #741a40;
+   }
+   .card h3
+   {
+      font-weight: bold;
+      color: #741a40;
+   }
+   .speed-links .card p
+   {
+      height: 222px;
+      padding-right: 20px;
+      padding-left: 10px;
+      color: #741a40;
+   }
+  .speed-links .card img
+   {
+      border-radius: 0px;
+   }
+  .speed-links .card .btn-primary
+   {
+      background-color: #741a40;
+      border-color: #741a40;
+      margin-left: 80px;
+      margin-top: 35px;
+      position: absolute;
+      box-shadow: 7px 8px 8px -5px #818284;
+      border-radius: 0px;
+   }
+   
+   .speed-links .card  .long
+   {
+      margin-top: 0px;
+   }
+   /*end cardes*/
+   /*start news slider*/
+   
+   h1
+   {
+   text-align: center;
+    padding-top: 100px;
+    
+   }
+   
+  .all-news
+{
+   color: #111;
+   font-weight: bold;
+    position: relative;
+    margin-left: 1060px;
+   
+}
+ .News-slider img{
+   height: 183.67px;
+ }
+
+   .News-slider .card
+   {
+      margin-top: 0px;
+      margin-bottom: 20px
+   }
+   
+   .News-slider .card-body
+   {
+          min-width: 360px;
+         height: 350px;
+   }
+   .News-slider .card .divider
+   {
+    height: 1px;
+   padding: 3px;
+    overflow: hidden;
+    background-color: #741a40;
+   }
+   .News-slider .card h3
+   {
+      margin-right:  5px;
+      font-weight: bold;
+      color: #741a40;
+   }
+  .News-slider .card .sub-title
+  {
+   color: #818288;
+  }
+   .News-slider .card p
+   {
+      height:222px; 
+      padding-right: 20px;
+      padding-left: 10px;
+      color: #a4a5a6;
+   }
+ 
+  .News-slider .card .btn-primary
+   {
+      background-color: #741a40;
+      border-color: #741a40;
+      margin-left: 100px;
+      
+      position: absolute;
+      box-shadow: 7px 8px 8px -5px #818284;
+      border-radius: 0px;
+   }
+   
+   .News-slider .card  .long
+   {
+      margin-top: 520px;
+   }
+   
+   .News-slider .carousel-indicators
+   {
+     top: 670px;
+      position: relative;
+
+   }
+   .News-slider .carousel-indicators li{
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+      background-color: #818284;
+   }
+ .News-slider  .carousel-control-prev-icon
+ {
+   width: 30px;
+   height: 30px;
+   position: relative;
+   top: 380px;
+   color: #818284;
+ }
+ .News-slider .carousel-control-next-icon
+ {
+   width: 30px;
+   height: 30px;
+   position: relative;
+   top: 380px;
+   color: #818284;
+ }
+/*end news slider*/
+/*start event slider*/
+.all-events
+{
+    color: #111;
+    font-weight: bold;
+    position: relative;
+    margin-left: 1060px;
+   
+}
+ .events-slider .card
+   {
+      margin-top: 0px;
+      margin-bottom: 120px
+   }
+  
+    .events-slider .card-body
+   {
+          min-width: 360px;
+          min-height: 122px;
+   }
+   
+   .events-slider .card h3
+   {
+      font-weight: bold;
+      color: #741a40;
+      margin: 10px;
+   }
+  .events-slider .card .sub-title
+  {
+   color: #818288;
+  }
+   .events-slider .card p
+   {
+   
+      height: 140px;
+      padding-right: 20px;
+      padding-left: 10px;
+      color: #a4a5a6;
+   }
+.events-slider .top-date
+{
+   min-width: 120px;
+   height: 38px;
+   background-color: #796300;
+    border-color: #796300;
+    color: #FFF;
+    position: relative;
+    margin-left: 30px;
+    box-shadow: 7px 8px 8px -5px #818284;
+    border-radius: 0px;
+}
+
+  .events-slider .card .long
+   {
+      background-color: #796300;
+      border-color: #796300;
+      margin-left: 105px;
+      margin-top: 320px;
+      position: absolute;
+      box-shadow: 7px 8px 8px -5px #818284;
+      border-radius: 0px;
+   }
+   
+   .events-slider .carousel-indicators
+   {
+      top: 470px;
+      position: relative;
+
+   }
+   .events-slider .carousel-indicators li{
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+      background-color: #818284;
+   }
+ .events-slider .carousel-control-prev-icon
+ {
+   width: 30px;
+   height: 30px;
+   position: relative;
+   top: 230px;
+   color: #818284;
+ }
+ .events-slider .carousel-control-next-icon
+ {
+
+   width: 30px;
+   height: 30px;
+   position: relative;
+   top: 230px;
+   color: #818284;
+ }
+.events-slider img
+{
+    position: relative;
+    margin-top: -150px
+}
+
+/*End event slider*/
+/*start form*/
+ .request-form
+     {
+        margin-left: 200px;
+     }
+     
+     .request-form h3
+     {
+      font-weight: bold;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 20px;
+     }
+/*End form*/

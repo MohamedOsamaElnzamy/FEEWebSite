@@ -2,30 +2,481 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+<!--start Slider-->
+
+<div class="sliderHomepage">
+    <div id="main-slider" class="carousel slide" data-ride="carousel">
+
+        <div class="carousel-inner">
+            <div class="carousel-item carousel-item1 carousel-one active">
+            </div>
+            <div class="carousel-item carousel-item1 carousel-two">
+            </div>
+            <div class="carousel-item carousel-item1 carousel-three">
+            </div>
+        </div>
+
+        <ol class="carousel-indicators">
+            <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+            <li data-target="#main-slider" data-slide-to="1"></li>
+            <li data-target="#main-slider" data-slide-to="2"></li>
+        </ol>
+
     </div>
 </div>
+<!--End Slider-->
+<!--About-->
+<div class="container abouthomepage">
+    <div class="row">
+        <div class="frame">
+            <img class="about_img col-md-7 col-xs-12" src="~/images/fee/04.jpg">
+        </div>
+        <div class="about-main col-md-5 col-xs-12">
+            <h2>About us</h2>
+            <p>
+                The Faculty of Electronic Engineering was formally designated and established in the city of Menouf in 1964.
+                Menouf city lies to the south west of delta at about 65 km north of Cairo. It was established to be the lighthouse
+                of Electronics in the Middle East. Being distinguished by this field made it the only exporter of engineers in the
+                following sub-fields of electronics: Computer Science and Engineering. Automatic Control Engineering. Electronics and
+                Electrical Communications Engineering. Until now, the Faculty of Electronic Engineering is the only specialized Faculty
+                in this field in Egypt. Other universities may include only departments of Electrical and Electronic Engineering.
+            </p>
+
+        </div>
+    </div>
+</div>
+<!--start cards-->
+<div class="speed-links">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="~/images/cards/06.jpg" alt="News">
+                    <div role="separator" class="divider"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">News</h3>
+                        <a href="News" class="btn btn-primary">Find out more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="~/images/cards/02.jpg" alt="College Events">
+                    <div role="separator" class="divider"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">College Events</h3>
+                        <a href="../../Events/html/Events.html" class="btn btn-primary">Find out more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../images/cards/04.jpg" alt="50 years of giving">
+                    <div role="separator" class="divider"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">50 years of giving</h3>
+                        <a href="#" class="btn btn-primary ">Find out more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../images/cards/01.jpg" alt="Card image cap">
+                    <div role="separator" class="divider"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">About</h3>
+                        <p>
+                            The Faculty of Electronic Engineering was formally designated and established in the city of Menouf  in 1964.
+                            Menouf city lies to the south west of delta at about 65 km north of Cairo.
+                            It was established to be the lighthouse of Electronics in the Middle East. Being distinguished by
+                            this field made it the only exporter of engineers
+                        </p>
+                        <a href="#" class="btn btn-primary long">Find out more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../images/cards/07.jpg" alt="Card image cap">
+                    <div role="separator" class="divider"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">Prospective students</h3>
+                        <p>
+                            Whether you are looking for information about undergraduate or postgraduate courses, these pages will give you a
+                            taste of the College and how you might enjoy life with us.
+                        </p>
+                        <a href="#" class="btn btn-primary long">Find out more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../images/cards/08.jpg" alt="Card image cap">
+                    <div role="separator" class="divider"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">Alumni</h3>
+                        <p>
+                            Welcome back! As a former Faculty of Electronic Engineering student you are a lifelong member of the College and are part of a
+                            community of over 30,000 alumni all over the world.
+                            The Development Office is on hand to help connect you with the College and your fellow Faculty of Electronic Engineering.
+                        </p>
+                        <a href="#" class="btn btn-primary long">Find out more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End cards-->
+<!--start Featured news-->
+<h1>  Featured news </h1>
+<div class="News-slider">
+    <div class="container">
+        <div class="row">
+            <a href="../../News/html/News.html" class="all-news">All news</a>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="card" style="width: 18rem;">
+                                        <img class="card-img-top" src="../images/cards/00.png" alt="Card image cap">
+                                        <a href="#" class="btn btn-primary long">Find out more</a>
+
+                                        <div role="separator" class="divider"></div>
+                                        <div class="card-body">
+                                            <h3 class="card-title"> Win a project on water quality</h3>
+                                            <h5 class="sub-title">15 March 2020</h5>
+                                            <p>
+                                                The college project on water quality has been accepted and will be funded by the ITAC
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="card" style="width: 18rem;">
+                                        <img class="card-img-top" src="../images/cards/01.png" alt="Card image cap">
+                                        <a href="#" class="btn btn-primary long">Find out more</a>
+                                        <div role="separator" class="divider"></div>
+                                        <div class="card-body">
+                                            <h3 class="card-title">Tea workshop</h3>
+                                            <h5 class="sub-title">3 March 2020</h5>
+                                            <p>
+                                                FEE held a workshop entitled "Tea Sympathy" as a kind of entertainment
+                                                and humor from students to faculty members to break down barriers and bridge gaps between students and doctors.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="card" style="width: 18rem;">
+                                        <img class="card-img-top" src="../images/cards/02.png" alt="Card image cap">
+                                        <a href="#" class="btn btn-primary long">Find out more</a>
+
+                                        <div role="separator" class="divider"></div>
+                                        <div class="card-body">
+                                            <h3 class="card-title"> Handball team is reaching the final of the league</h3>
+                                            <h5 class="sub-title">13 March 2020</h5>
+                                            <p>
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="card" style="width: 18rem;">
+                                        <img class="card-img-top" src="../images/cards/00.png" alt="Card image cap">
+                                        <a href="#" class="btn btn-primary long">Find out more</a>
+
+                                        <div role="separator" class="divider"></div>
+                                        <div class="card-body">
+                                            <h3 class="card-title"> Win a project on water quality</h3>
+                                            <h5 class="sub-title">15 March 2020</h5>
+                                            <p>
+                                                The college project on water quality has been accepted and will be funded by the ITAC
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="card" style="width: 18rem;">
+                                        <img class="card-img-top" src="../images/cards/01.png" alt="Card image cap">
+                                        <a href="#" class="btn btn-primary long">Find out more</a>
+                                        <div role="separator" class="divider"></div>
+                                        <div class="card-body">
+                                            <h3 class="card-title">Tea workshop</h3>
+                                            <h5 class="sub-title">3 March 2020</h5>
+                                            <p>
+                                                FEE held a workshop entitled "Tea Sympathy" as a kind of entertainment
+                                                and humor from students to faculty members to break down barriers and bridge gaps between students and doctors.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="card" style="width: 18rem;">
+                                        <img class="card-img-top" src="../images/cards/02.png" alt="Card image cap">
+                                        <a href="#" class="btn btn-primary long">Find out more</a>
+
+                                        <div role="separator" class="divider"></div>
+                                        <div class="card-body">
+                                            <h3 class="card-title"> Handball team is reaching the final of the league</h3>
+                                            <h5 class="sub-title">13 March 2020</h5>
+                                            <p>
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="card" style="width: 18rem;">
+                                        <img class="card-img-top" src="../images/cards/00.png" alt="Card image cap">
+                                        <a href="#" class="btn btn-primary long">Find out more</a>
+
+                                        <div role="separator" class="divider"></div>
+                                        <div class="card-body">
+                                            <h3 class="card-title"> Win a project on water quality</h3>
+                                            <h5 class="sub-title">15 March 2020</h5>
+                                            <p>
+                                                The college project on water quality has been accepted and will be funded by the ITAC
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="card" style="width: 18rem;">
+                                        <img class="card-img-top" src="../images/cards/01.png" alt="Card image cap">
+                                        <a href="#" class="btn btn-primary long">Find out more</a>
+                                        <div role="separator" class="divider"></div>
+                                        <div class="card-body">
+                                            <h3 class="card-title">Tea workshop</h3>
+                                            <h5 class="sub-title">3 March 2020</h5>
+                                            <p>
+                                                FEE held a workshop entitled "Tea Sympathy" as a kind of entertainment
+                                                and humor from students to faculty members to break down barriers and bridge gaps between students and doctors.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <div class="card" style="width: 18rem;">
+                                        <img class="card-img-top" src="../images/cards/02.png" alt="Card image cap">
+                                        <a href="#" class="btn btn-primary long">Find out more</a>
+
+                                        <div role="separator" class="divider"></div>
+                                        <div class="card-body">
+                                            <h3 class="card-title"> Handball team is reaching the final of the league</h3>
+                                            <h5 class="sub-title">13 March 2020</h5>
+                                            <p>
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Featured news-->
+<!--start Featured events-->
+<h1>Featured events</h1>
+<div class="events-slider">
+    <div class="container">
+        <div class="row">
+            <a href="../../Events/html/Events.html" class="all-events">All events</a>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <a class="btn btn-primary top-date">3 march 2020</a>
+                                    <div class="card" style="width: 18rem;">
+                                        <a href="#" class="btn btn-primary long">More details</a>
+                                        <div class="card-body">
+                                            <h3 class="card-title">Faculty of Electronic Engineering Golden Jubilee</h3>
+                                            <p>
+                                                The college will celebrate the Golden Jubilee, and invite you to participate and attend the celebration
+                                            </p>
+                                            <div class="event-link">
+                                                <a href="#" class="social"><img src="../images/Social/facebook-24.png"></a>
+                                                <a href="#" class="social"><img src="../images/Social/twitter-32.png"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <a class="btn btn-primary top-date">3 march 2020</a>
+                                    <div class="card" style="width: 18rem;">
+                                        <a href="#" class="btn btn-primary long">More details</a>
+                                        <div class="card-body">
+                                            <h3 class="card-title">Faculty of Electronic Engineering Golden Jubilee</h3>
+                                            <p>
+                                                The college will celebrate the Golden Jubilee, and invite you to participate and attend the celebration
+                                            </p>
+                                            <div class="event-link">
+                                                <a href="#" class="social"><img src="../images/Social/facebook-24.png"></a>
+                                                <a href="#" class="social"><img src="../images/Social/twitter-32.png"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <a class="btn btn-primary top-date">21 march 2020</a>
+                                    <div class="card" style="width: 18rem;">
+                                        <a href="#" class="btn btn-primary long">More details</a>
+                                        <div class="card-body">
+                                            <h3 class="card-title">Faculty of Electronic Engineering Golden Jubilee</h3>
+                                            <p>
+                                                The college will celebrate the Golden Jubilee, and invite you to participate and attend the celebration
+                                            </p>
+                                            <div class="event-link">
+                                                <a href="#" class="social"><img src="../images/Social/facebook-24.png"></a>
+                                                <a href="#" class="social"><img src="../images/Social/twitter-32.png"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <a class="btn btn-primary top-date">3 march 2020</a>
+                                    <div class="card" style="width: 18rem;">
+                                        <a href="#" class="btn btn-primary long">More details</a>
+                                        <div class="card-body">
+                                            <h3 class="card-title">Faculty of Electronic Engineering Golden Jubilee</h3>
+                                            <p>
+                                                The college will celebrate the Golden Jubilee, and invite you to participate and attend the celebration
+                                            </p>
+                                            <div class="event-link">
+                                                <a href="#" class="social"><img src="../images/Social/facebook-24.png"></a>
+                                                <a href="#" class="social"><img src="../images/Social/twitter-32.png"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <a class="btn btn-primary top-date">3 march 2020</a>
+                                    <div class="card" style="width: 18rem;">
+                                        <a href="#" class="btn btn-primary long">More details</a>
+                                        <div class="card-body">
+                                            <h3 class="card-title">Faculty of Electronic Engineering Golden Jubilee</h3>
+                                            <p>
+                                                The college will celebrate the Golden Jubilee, and invite you to participate and attend the celebration
+                                            </p>
+                                            <div class="event-link">
+                                                <a href="#" class="social"><img src="../images/Social/facebook-24.png"></a>
+                                                <a href="#" class="social"><img src="../images/Social/twitter-32.png"></a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-md-6">
+                                    <a class="btn btn-primary top-date">3 march 2020</a>
+                                    <div class="card" style="width: 18rem;">
+                                        <a href="#" class="btn btn-primary long">More details</a>
+
+                                        <div class="card-body">
+                                            <h3 class="card-title">Faculty of Electronic Engineering Golden Jubilee</h3>
+                                            <p>
+                                                The college will celebrate the Golden Jubilee, and invite you to participate and attend the celebration
+
+                                            </p>
+                                            <div class="event-link">
+                                                <a href="#" class="social"><img src="../images/Social/facebook-24.png"></a>
+                                                <a href="#" class="social"><img src="../images/Social/twitter-32.png"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--start footer-->
+<!--Start form-->
+<form name="regester" class="request-form ">
+    <fieldset>
+        <h3>Feedback Request Form</h3>
+        <label class="col-lg-3">First Name</label>
+        <br>
+        <input type="text" name="Username" maxlength="10" class="col-lg-3">
+        <br>
+        <label class="col-lg-3">Last Name</label>
+        <br>
+        <input type="text" name="Username" maxlength="10" class="col-lg-3 ">
+        <br>
+        <label class="col-lg-3">E-mail</label>
+        <label class="col-lg-3 offset-lg-3">Country</label>
+        <br>
+        <input type="email" name="Username" maxlength="50" class="col-lg-3">
+        <input type="text" name="Username" maxlength="10" class="col-lg-3 offset-lg-3">
+        <br>
+        <label class="col-lg-3">Tel</label>
+        <label class="col-lg-3 offset-lg-3">City</label>
+        <br>
+        <input type="text" name="Username" maxlength="10" class="col-lg-3">
+        <input type="text" name="Username" maxlength="10" class="col-lg-3 offset-lg-3">
+        <br>
+        <label class="col-lg-3">your massege</label><br>
+        <textarea rows="6" cols="130" placeholder="Put you message"></textarea><br>
+        <input type="submit" value="Submit">
+    </fieldset>
+    <br>
+</form>
+<!--end form-->

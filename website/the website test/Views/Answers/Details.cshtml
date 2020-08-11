@@ -1,0 +1,50 @@
+﻿@model the_website_test.Models.Answers
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Answers</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Value)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Value)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Questions.Question)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Questions.Question)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subjects.SubjectName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subjects.SubjectName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

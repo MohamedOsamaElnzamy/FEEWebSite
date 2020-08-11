@@ -285,6 +285,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="GetRequiredSubjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="subjectID" Type="int" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="ID" Type="int" Nullable="false" />
+                <Property Name="SubjectName" Type="nvarchar(max)" />
+                <Property Name="Code" Type="nvarchar(max)" />
+                <Property Name="NHours" Type="int" Nullable="false" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
         <EntityContainer Name="DB_A50C7A_FEEModelStoreContainer">
           <EntitySet Name="Answers" EntityType="Self.Answers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Departments" EntityType="Self.Departments" Schema="dbo" store:Type="Tables" />
@@ -712,6 +725,9 @@
             <End Role="StaffMembers" EntitySet="StaffMembers" />
             <End Role="Departments" EntitySet="Departments" />
           </AssociationSet>
+          <FunctionImport Name="GetRequiredSubjects" IsComposable="true" ReturnType="Collection(DB_A50C7A_FEEModel.GetRequiredSubjects_Result)">
+          <Parameter Name="subjectID" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <Association Name="FK_Departments_StaffMembers">
           <End Type="DB_A50C7A_FEEModel.StaffMembers" Role="StaffMembers" Multiplicity="0..1" />
@@ -725,6 +741,12 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <ComplexType Name="GetRequiredSubjects_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="SubjectName" Nullable="true" />
+          <Property Type="String" Name="Code" Nullable="true" />
+          <Property Type="Int32" Name="NHours" Nullable="false" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -866,6 +888,16 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetRequiredSubjects" FunctionName="DB_A50C7A_FEEModel.Store.GetRequiredSubjects">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_A50C7A_FEEModel.GetRequiredSubjects_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="NHours" ColumnName="NHours" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -129,14 +129,19 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AnswersController.cs" />
     <Compile Include="Controllers\DepartmentsController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LecturesTablesController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\Questions1Controller.cs" />
     <Compile Include="Controllers\QuestionsController.cs" />
     <Compile Include="Controllers\StaffMembersController.cs" />
     <Compile Include="Controllers\StaticViewsController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
+    <Compile Include="Controllers\StudentSubjectsController.cs" />
+    <Compile Include="Controllers\SubjectDependsController.cs" />
     <Compile Include="Controllers\SubjectsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -163,6 +168,9 @@
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Events.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetRequiredSubjects_Result.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\LecturesTable.cs">
@@ -332,6 +340,31 @@
     <Content Include="Views\StaffMembers\Index.cshtml" />
     <Content Include="Views\Shared\AccountCategories.cshtml" />
     <Content Include="Views\Students\PersonalInformation.cshtml" />
+    <Content Include="Views\SubjectDepends\Create.cshtml" />
+    <Content Include="Views\SubjectDepends\Delete.cshtml" />
+    <Content Include="Views\SubjectDepends\Details.cshtml" />
+    <Content Include="Views\SubjectDepends\Edit.cshtml" />
+    <Content Include="Views\SubjectDepends\Index.cshtml" />
+    <Content Include="Views\Answers\Create.cshtml" />
+    <Content Include="Views\Answers\Delete.cshtml" />
+    <Content Include="Views\Answers\Details.cshtml" />
+    <Content Include="Views\Answers\Edit.cshtml" />
+    <Content Include="Views\Answers\Index.cshtml" />
+    <Content Include="Views\LecturesTables\Create.cshtml" />
+    <Content Include="Views\LecturesTables\Delete.cshtml" />
+    <Content Include="Views\LecturesTables\Details.cshtml" />
+    <Content Include="Views\LecturesTables\Edit.cshtml" />
+    <Content Include="Views\LecturesTables\Index.cshtml" />
+    <Content Include="Views\Questions1\Create.cshtml" />
+    <Content Include="Views\Questions1\Delete.cshtml" />
+    <Content Include="Views\Questions1\Details.cshtml" />
+    <Content Include="Views\Questions1\Edit.cshtml" />
+    <Content Include="Views\Questions1\Index.cshtml" />
+    <Content Include="Views\StudentSubjects\Create.cshtml" />
+    <Content Include="Views\StudentSubjects\Delete.cshtml" />
+    <Content Include="Views\StudentSubjects\Details.cshtml" />
+    <Content Include="Views\StudentSubjects\Edit.cshtml" />
+    <Content Include="Views\StudentSubjects\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

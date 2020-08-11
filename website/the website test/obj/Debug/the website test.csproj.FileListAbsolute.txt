@@ -159,7 +159,6 @@ F:\FEEWebSite\website\the website test\bin\System.Web.WebPages.Razor.xml
 F:\FEEWebSite\website\the website test\bin\Newtonsoft.Json.xml
 F:\FEEWebSite\website\the website test\bin\Antlr3.Runtime.pdb
 F:\FEEWebSite\website\the website test\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-F:\FEEWebSite\website\the website test\obj\Debug\the website test.csprojAssemblyReference.cache
 F:\FEEWebSite\website\the website test\obj\Debug\the website test.csproj.CoreCompileInputs.cache
 F:\FEEWebSite\website\the website test\obj\Debug\the website test.csproj.CopyComplete
 F:\FEEWebSite\website\the website test\obj\Debug\the website test.dll

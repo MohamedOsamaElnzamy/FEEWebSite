@@ -12,6 +12,8 @@ namespace the_website_test.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class DB_A50C7A_FEEEntities : DbContext
     {
@@ -36,5 +38,15 @@ namespace the_website_test.Models
         public virtual DbSet<StudentSubject> StudentSubject { get; set; }
         public virtual DbSet<SubjectDepend> SubjectDepend { get; set; }
         public virtual DbSet<Subjects> Subjects { get; set; }
+    
+        [DbFunction("DB_A50C7A_FEEEntities", "GetRequiredSubjects")]
+        public virtual IQueryable<GetRequiredSubjects_Result> GetRequiredSubjects(Nullable<int> subjectID)
+        {
+            var subjectIDParameter = subjectID.HasValue ?
+                new ObjectParameter("subjectID", subjectID) :
+                new ObjectParameter("subjectID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<GetRequiredSubjects_Result>("[DB_A50C7A_FEEEntities].[GetRequiredSubjects](@subjectID)", subjectIDParameter);
+        }
     }
 }

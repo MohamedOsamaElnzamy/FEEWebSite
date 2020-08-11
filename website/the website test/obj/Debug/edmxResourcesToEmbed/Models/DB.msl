@@ -136,5 +136,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetRequiredSubjects" FunctionName="DB_A50C7A_FEEModel.Store.GetRequiredSubjects">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_A50C7A_FEEModel.GetRequiredSubjects_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="NHours" ColumnName="NHours" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

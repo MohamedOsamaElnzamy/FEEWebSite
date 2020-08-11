@@ -358,6 +358,9 @@
       <End Role="StaffMembers" EntitySet="StaffMembers" />
       <End Role="Departments" EntitySet="Departments" />
     </AssociationSet>
+    <FunctionImport Name="GetRequiredSubjects" IsComposable="true" ReturnType="Collection(DB_A50C7A_FEEModel.GetRequiredSubjects_Result)">
+      <Parameter Name="subjectID" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <Association Name="FK_Departments_StaffMembers">
     <End Type="DB_A50C7A_FEEModel.StaffMembers" Role="StaffMembers" Multiplicity="0..1" />
@@ -371,4 +374,10 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <ComplexType Name="GetRequiredSubjects_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="SubjectName" Nullable="true" />
+    <Property Type="String" Name="Code" Nullable="true" />
+    <Property Type="Int32" Name="NHours" Nullable="false" />
+  </ComplexType>
 </Schema>

@@ -128,5 +128,21 @@ namespace the_website_test.Controllers
             }
             base.Dispose(disposing);
         }
+
+        // GET: Students/PersonalInformation/5
+        public ActionResult PersonalInformation(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Students students = db.Students.Find(id);
+            if (students == null)
+            {
+                return HttpNotFound();
+            }
+            return View(students);
+        }
+
     }
 }

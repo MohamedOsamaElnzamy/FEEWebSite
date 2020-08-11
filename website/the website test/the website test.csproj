@@ -328,6 +328,8 @@
     <Content Include="Views\StaffMembers\Details.cshtml" />
     <Content Include="Views\StaffMembers\Edit.cshtml" />
     <Content Include="Views\StaffMembers\Index.cshtml" />
+    <Content Include="Views\Shared\AccountCategories.cshtml" />
+    <Content Include="Views\Students\PersonalInformation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,33 @@
+﻿@model the_website_test.Models.Students
+@{
+    ViewBag.Title = "PersonalInformation";
+}
+@Html.Partial("AccountCategories", Model)
+<div class="Cv col-xl-8">
+    <img src="@Model.Image_path" alt="@Model.FullName" class="profile" id="profile_pic"><br>
+    <label for="name">Name:</label>
+    <output id="name">@Model.FullName</output><br>
+    <label for="NationalId">National Id:</label>
+    <output id="NationalId">@Model.SSN</output><br>
+    <label for="AcademicId">Academic Id:</label>
+    <output id="AcademicId">@Model.AcademicNumber</output><br>
+    <label for="level">Level:</label>
+    <output id="level">4</output><br>
+    <label for="department">Department:</label>
+    <output id="department">@Model.DeptID</output><br>
+    <label for="phone">Phone:</label>
+    <output id="phone">@*@Model.Number*@</output><br>
+    <label for="Accounts">Accounts:</label>
+    <ul class="list-unstyled social-list">
+        <li><img src="~/images/Social/facebook.png" alt="Facebook"></li>
+        <li><img src="~/images/social/youtube.png" alt="Youtube"></li>
+        <li><img src="~/images/social/linkedin.png" alt="Linkedin"></li>
+        <li><img src="~/images/social/Google_plus.png" alt="Google plus"></li>
+        <li><img src="~/images/social/twitter.png" alt="Twitter"></li>
+        <li><img src="~/images/social/teams.png" alt="Teams" width="45" height="45"></li>
+        <a href="Students/Edit/@Model.ID" class=" btn-lg modify" role="button" aria-pressed="true">Edit profile</a>
+    </ul>
+</div>
+            </div>
+            </div>
+<!--end Account-->

@@ -8,112 +8,115 @@
 
 
 <h4 style=" color:red">finished subjects</h4>
-
-<table class="table">
-    <tr>
-        <th>
-            subName
-        </th>
-        <th>
-            code
-        </th>
-        <th>
-            GPA
-        </th>
-
-        
-    </tr>
-
-    @foreach (var item in ViewData["finished1"] as List<subjectsWithMark>)
-    {
+<div class="Cv col-xl-8">
+    <table class="table">
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.code)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Mark)
-            </td>
+            <th>
+                subName
+            </th>
+            <th>
+                code
+            </th>
+            <th>
+                GPA
+            </th>
 
 
         </tr>
-    }
 
-</table>
+        @foreach (var item in ViewData["finished1"] as List<subjectsWithMark>)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.code)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mark)
+                </td>
+
+
+            </tr>
+        }
+
+    </table>
 
 
 
-<h4 style=" color:red">Unfinished subjects</h4>
+    <h4 style=" color:red">Unfinished subjects</h4>
 
-<table class="table">
-    <tr>
-        <th>
-            subName
-        </th>
-        <th>
-            code
-        </th>
-        <th>
-            credit_hours
-        </th>
-       
-       
-    </tr>
-
-    @foreach (var item in ViewData["unfinished"] as List<Subjects>)
-    {
+    <table class="table">
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.SubjectName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Code)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NHours)
-            </td>
-          
+            <th>
+                subName
+            </th>
+            <th>
+                code
+            </th>
+            <th>
+                credit_hours
+            </th>
+
 
         </tr>
-    }
 
-</table>
+        @foreach (var item in ViewData["unfinished"] as List<Subjects>)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SubjectName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Code)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NHours)
+                </td>
+
+
+            </tr>
+        }
+
+    </table>
 
 
 
-<h4 style=" color:red">Enabled subjects</h4>
+    <h4 style=" color:red">Enabled subjects</h4>
 
-<table class="table">
-    <tr>
-        <th>
-            subName
-        </th>
-        <th>
-            code
-        </th>
-        <th>
-            credit_hours
-        </th>
-        
-       
-    </tr>
-
-    @foreach (var item in ViewData["Enabled"] as List<Subjects>)
-    {
+    <table class="table">
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.SubjectName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Code)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NHours)
-            </td>
-           
-        </tr>
-    }
+            <th>
+                subName
+            </th>
+            <th>
+                code
+            </th>
+            <th>
+                credit_hours
+            </th>
 
-</table>
+
+        </tr>
+
+        @foreach (var item in ViewData["Enabled"] as List<Subjects>)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SubjectName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Code)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NHours)
+                </td>
+
+            </tr>
+        }
+
+    </table>
+</div>
+ </div>
+            </div>

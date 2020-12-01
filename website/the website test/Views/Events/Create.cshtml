@@ -4,110 +4,112 @@
     ViewBag.Title = "Create";
 
 }
+
 <form action="/Events/Create" enctype="multipart/form-data" method="post">
-    <input name="__RequestVerificationToken" type="hidden" value="mwEPIz4xUXbvVzVEj8bCLcELGhzKdTYBqLHj3WdI0EdbzHo5T6TiVWbMJhgbad09Morij7XsON3-rMpEx3TlwCOqRzuybrtpGdV8J-tcePU1" />    <div class="form-horizontal">
-        <div class="Add-Event">
-            <div class="form-group">
-                <fieldset>
-                    <h2>Add Event</h2>
+        <input name="__RequestVerificationToken" type="hidden" value="88V2m8Igu7BHwgkRKZ4RzDC-twDA7jO15k0ljFZWv0OyVuKs9gSYNSjDVU1tBxsUKco2vJ_ZnUeFjgDTRy9zj1U_PhiP9gDxH-eo3YXs7jQ1" />    <div class="form-horizontal">
+            <div class="Add-Event">
+                <div class="form-group">
+                    <fieldset>
+                        <h2>Add Event</h2>
 
-                    <label class="col-lg-3">Title</label>
-                    <br>
-                    <textarea name="Title" rows="1" cols="133" class="Event-title"></textarea>
-                    <br>
-                    <label class="col-lg-3">Facebook link</label>
-                    <br>
-                    <textarea name="FBLink" rows="1" cols="133" placeholder="Put Facebook link" class="Facebook-link"></textarea>
-                    <br>
-                    <label class="col-lg-3">Twitter link</label>
-                    <br>
-                    <textarea name="TwitterLink" rows="1" cols="133" placeholder="Put Twitter link" class="Twitter-link"></textarea>
-                    <br>
-                    <label class="col-lg-3">Small pragraph</label>
-                    <br>
-                    <textarea name="Description" rows="2" cols="133" placeholder="Put small pragraph" class="Small-pragraph"></textarea>
-                    <br>
-                    <label class="col-lg-3">Full pragraph</label>
-                    <br>
-                    <textarea name="Body" rows="6" cols="133" placeholder="Put full pragraph" class="Full pragraph"></textarea>
-                    <br>
-                    <label class="col-lg-3">upload image</label>
-                    <br>
-                    <input type="file" name="ImageFile" required />
-                    <br />
-                    <input type="submit" value="Create" class="save-button" />
-                </fieldset>
-            </div>
-        </div>
-    </div>
-</form>
-@*
-    @using (Html.BeginForm("Create", "Events", FormMethod.Post, new { enctype = "multipart/form-data" }))
-    {
-        @Html.AntiForgeryToken()
-
-
-
-        <div class="form-horizontal">
-            <h4>Events</h4>
-            <hr />
-
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">
-                @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.FBLink, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.FBLink, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.FBLink, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.TwitterLink, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.TwitterLink, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.TwitterLink, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.Body, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Body, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Body, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <label class="col-lg-3">upload image</label>
-            <br>
-            <input type="file" name="ImageFile" required />
-            <br />
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-default" />
+                        <label class="col-lg-3">Title</label>
+                        <br>
+                        <textarea name="Title" rows="1" cols="133" class="Event-title"></textarea>
+                        <br>
+                        <label class="col-lg-3">Facebook link</label>
+                        <br>
+                        <textarea name="FBLink" rows="1" cols="133" placeholder="Put Facebook link" class="Facebook-link"></textarea>
+                        <br>
+                        <label class="col-lg-3">Twitter link</label>
+                        <br>
+                        <textarea name="TwitterLink" rows="1" cols="133" placeholder="Put Twitter link" class="Twitter-link"></textarea>
+                        <br>
+                        <label class="col-lg-3">Small pragraph</label>
+                        <br>
+                        <textarea name="Description" rows="2" cols="133" placeholder="Put small pragraph" class="Small-pragraph"></textarea>
+                        <br>
+                        <label class="col-lg-3">Full pragraph</label>
+                        <br>
+                        <textarea name="Body" rows="6" cols="133" placeholder="Put full pragraph" class="Full pragraph"></textarea>
+                        <br>
+                        <label class="col-lg-3">upload image</label>
+                        <br>
+                        <input type="file" name="ImageFile" required />
+                        <br />
+                        <input type="submit" value="Create" class="save-button" />
+                    </fieldset>
                 </div>
             </div>
         </div>
-    }
+    </form>
 
-    <div>
-        @Html.ActionLink("Back to List", "Index")
+
+@*@using (Html.BeginForm("Create", "Events", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+
+
+    <div class="form-horizontal">
+        <h4>Events</h4>
+        <hr />
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FBLink, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FBLink, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FBLink, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TwitterLink, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TwitterLink, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TwitterLink, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Body, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Body, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Body, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <label class="col-lg-3">upload image</label>
+        <br>
+        <input type="file" name="ImageFile" required />
+        <br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
     </div>
-*@
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>*@
+
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
